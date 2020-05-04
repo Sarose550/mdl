@@ -50,7 +50,7 @@ def run(filename):
     for command in commands:
         #print(command)
         if command['op'] == 'push':
-          stack.append(order[:] for order in stack[-1])
+          stack.append([order[:] for order in stack[-1]])   
         elif command['op'] == 'pop':
           stack.pop()
         elif command['op'] == 'move':
